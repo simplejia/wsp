@@ -1,47 +1,27 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
 
-# Folder config file
-Desktop.ini
+# Folders
+_obj
+_test
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
 
-# Windows shortcuts
-*.lnk
+_testmain.go
 
-# =========================
-# Operating System Files
-# =========================
+*.exe
+*.test
+*.prof
 
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+demo/demo
+wsp

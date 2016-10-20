@@ -1,0 +1,38 @@
+{
+    "dev": {
+        "app": {
+            "name": "demo",
+            "ip": "0.0.0.0",
+            "port": 41291
+        },
+        "clog": {
+            "name":"demo",
+            "mode": 3, // 0: none, 1: localfile, 2: clog (数字代表bit位)
+            "level": 15 // 0: none, 1: debug, 2: warn 4: error 8: info (数字代表bit位)
+        }
+    },
+    "test": {
+        "app": {
+            "name": "demo",
+            "ip": "0.0.0.0",
+            "port": 41291
+        },
+        "clog": {
+            "name":"demo",
+            "mode": 3, // 0: none, 1: localfile, 2: clog (数字代表bit位)
+            "level": 15 // 0: none, 1: debug, 2: warn 4: error 8: info (数字代表bit位)
+        }
+    },
+    "prod": {
+        "app": {
+            "name": "demo",
+            "ip": "127.0.0.1",
+            "port": 41291
+        },
+        "clog": {
+            "name":"demo",
+            "mode": 2, // 0: none, 1: localfile, 2: clog (数字代表bit位)
+            "level": 14 // 0: none, 1: debug, 2: warn 4: error 8: info (数字代表bit位)
+        }
+    }
+}
