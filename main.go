@@ -327,6 +327,7 @@ func getGoFiles(path string) (files []string, err error) {
 
 func gen(es []*ca) (err error) {
 	if len(es) == 0 {
+		os.Remove("WSP.go")
 		return
 	}
 
