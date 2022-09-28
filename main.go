@@ -411,6 +411,7 @@ func gen(es []*ca) (err error) {
 		s += "\t\tt := time.Now()\n"
 		s += "\t\t_ = t\n"
 		s += "\t\tvar e interface{}\n"
+		s += "\t\t_ = e\n"
 		s += "\t\tc := new(" + e.PackageName + "." + e.TypeName + ")\n"
 		s += "\t\tdefer func() {\n"
 		s += "\t\t\te = recover()\n"
