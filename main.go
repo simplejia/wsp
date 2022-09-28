@@ -128,11 +128,17 @@ func snake(src string) string {
 }
 
 func getImportPath(file string) string {
-	dir := filepath.Dir(file)
-	for _, path := range build.Default.SrcDirs() {
+	var srcDirs []string
+	if WSPPATH := os.Getenv("WSPPATH"); WSPPATH != "" {
+		srcDirs = []string{WSPPATH}
+	} else {
+		srcDirs = build.Default.SrcDirs()
+	}
+
+	dir, _ := filepath.EvalSymlinks(filepath.Dir(file))
+	for _, path := range srcDirs {
 		path, _ = filepath.Abs(path)
 		path, _ = filepath.EvalSymlinks(path)
-		dir, _ = filepath.EvalSymlinks(dir)
 		if strings.HasPrefix(dir, path) {
 			return strings.Replace(dir[len(path)+1:], string(filepath.Separator), "/", -1)
 		}
