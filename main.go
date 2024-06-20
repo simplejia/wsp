@@ -427,7 +427,7 @@ func gen(es []*ca) (err error) {
 		s += "\t\tc." + e.MethodName + "(w, r)\n"
 		s += "\t})\n\n"
 	}
-	s += "}"
+	s += "}\n"
 
 	err = ioutil.WriteFile("WSP.go", []byte(s), 0644)
 	return
@@ -446,7 +446,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
 	}
-	flag.Parse()
+	flag.CommandLine.Parse(os.Args[1:])
 
 	println("Begin wsp")
 
